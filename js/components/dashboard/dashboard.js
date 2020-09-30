@@ -135,6 +135,7 @@
 		// if no data no need to update current data
 		if(!isDataInMemory())
 			return;
+		$(document.getElementById('spinner')).show();
 		// would be better not to chain promises
 		// but just to show off
 		// also failure should be handled but you can see an example for http 404 on failure for wrong code
@@ -145,7 +146,9 @@
 			});
 		});
 		// draw chart
-		promise.then(drawChart);
+		promise.then(drawChart).always(function() {
+			$(document.getElementById('spinner')).hide();
+		});
 	};
   ///
   // events & executions
