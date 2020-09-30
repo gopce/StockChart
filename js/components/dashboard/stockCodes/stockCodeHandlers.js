@@ -43,8 +43,10 @@
 	//
 	// events
 	//
-	$(document.getElementById('inputContainer')).children().each(function(i, stockCodeElement) {
-		stockCodeElement.addEventListener('search', toggleVisibilityField);
-		stockCodeElement.addEventListener('focusout', toggleVisibilityField);
-	});
+	window.addEventListener('load', function () {
+		$(document.getElementById('inputContainer')).children().each(function(i, stockCodeElement) {
+			stockCodeElement.addEventListener('search', toggleVisibilityField);
+			stockCodeElement.addEventListener('focusout', toggleVisibilityField);
+		});
+	})
 }())
