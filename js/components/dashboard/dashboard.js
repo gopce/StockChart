@@ -152,13 +152,15 @@
   ///
 	// redraw grid when resized. Try changing the browser to mobile in the consolo. Or just resize manually
 	window.addEventListener("resize", drawChart);
-	// append to search and blur events
-	$(document.getElementById('inputContainer')).children().each(function(i, stockCodeElement) {
-		stockCodeElement.addEventListener('search', changedCodeValue);
-		stockCodeElement.addEventListener('blur', changedCodeValue);
-	});
-	// this is super ugly and generic. But its just to make the example work.
-	$('input[type="radio"]').each(function(i, radioButton) {
-		radioButton.addEventListener('click', changePeriod);
-	});
+	window.addEventListener('load', function () {
+		// append to search and blur events
+		$(document.getElementById('inputContainer')).children().each(function(i, stockCodeElement) {
+			stockCodeElement.addEventListener('search', changedCodeValue);
+			stockCodeElement.addEventListener('blur', changedCodeValue);
+		});
+		// this is super ugly and generic. But its just to make the example work.
+		$('input[type="radio"]').each(function(i, radioButton) {
+			radioButton.addEventListener('click', changePeriod);
+		});
+	})
 }())
