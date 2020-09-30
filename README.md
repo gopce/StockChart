@@ -6,7 +6,7 @@ Also i am taking advantage of <a href="https://iexcloud.io">IEX Cloud</a> API to
 Thanks to boostrap styling the site can be seen in mobile too. Try resizing the page when having the chart loaded.
 
 ### How to use
-Just download the project and open the file in dashboard/index.html or go to 
+Just download the project and open the file in dashboard/index.html or go to https://stock-chart.netlify.app/
 
 ### Project guide
 
