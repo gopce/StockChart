@@ -159,7 +159,7 @@
 		// append to search and blur events
 		$(document.getElementById('inputContainer')).children().each(function(i, stockCodeElement) {
 			stockCodeElement.addEventListener('search', changedCodeValue);
-			stockCodeElement.addEventListener('blur', changedCodeValue);
+			stockCodeElement.addEventListener('focusout', changedCodeValue);
 		});
 		// this is super ugly and generic. But its just to make the example work.
 		$('input[type="radio"]').each(function(i, radioButton) {
