@@ -79,7 +79,7 @@
 						<span aria-hidden="true">&times;</span>
 					  </button>
 					</div>
-					<input id="stockCode1" code="" type="search" class="form-control mb-2" maxlength="8" placeholder="Stock Code..."/>
+					<input id="stockCode1" code="" type="search" class="form-control mb-2" maxlength="8" tabindex="1" placeholder="Stock Code..."/>
 				</div>
 				
 				<!-- second stock code field -->
@@ -89,7 +89,7 @@
 						<span aria-hidden="true">&times;</span>
 					  </button>
 					</div>
-					<input id="stockCode2" code="" type="search" class="form-control mb-2" maxlength="8" placeholder="Stock Code..."/>
+					<input id="stockCode2" code="" type="search" class="form-control mb-2" maxlength="8" tabindex="2" placeholder="Stock Code..."/>
 				</div>
 				
 				
@@ -100,20 +100,23 @@
 						<span aria-hidden="true">&times;</span>
 					  </button>
 					</div>
-					<input id="stockCode3" code="" type="search" class="form-control mb-2" maxlength="8" placeholder="Stock Code..."/>
+					<input id="stockCode3" code="" type="search" class="form-control mb-2" maxlength="8" tabindex="3" placeholder="Stock Code..."/>
 				</div>
 			</div>
 			<!-- Second part, period selector -->
 			<div class="btn-toolbar mt-2 mb-2 mb-md-0" data-toggle="tooltip" data-placement="left" title="Select historical period">
 				<div class="btn-group btn-group-toggle" data-toggle="buttons" >
 				  <label class="btn btn-outline-secondary active">
-					<input type="radio" name="options" value="m" checked> Month
+					<input type="radio" name="options" value="m" tabindex="4" checked> Month
 				  </label>
 				  <label class="btn btn-outline-secondary">
-					<input type="radio" name="options" value="y"> Year
+					<input type="radio" name="options" value="y" tabindex="5"> Year
 				  </label>
 				</div>
-			  </div>
+				<div id="spinner" class="spinner-border" style="display: none" role="status">
+				  <span class="sr-only">Loading...</span>
+				</div>
+			</div>
 		</div>
 		<!-- Finally, the google chart -->
 		<div id="chart_div" class="my-4 w-100" width="900" height="380"></div>
