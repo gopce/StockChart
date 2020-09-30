@@ -12,9 +12,8 @@ Just download the project and open the file in dashboard/index.html or go to
 
 ```bash
 .
-├── assets -> contains only bootstrap files so you can ignore it.
-└── dashboard
     ├── index.html -> is in charge of loading the main page and scripts. (there is no other page, sorry :/)
+    ├── assets -> contains only bootstrap files so you can ignore it.
     ├── css -> folder contains the stylesheet of the site.
     └── js
         ├── init.js -> init features of external libraries (boostrap tooltip, Google linear chart)
